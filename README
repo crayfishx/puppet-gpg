@@ -1,0 +1,23 @@
+Puppet Module: gpg
+------------------
+
+This module  gives a type and provider for managing and creating gpg keys on the fly - useful for sites running hiera-gpg
+
+Example:
+  gpgkey { 'hiera':
+    ensure    => present,
+    email     => 'puppet@puppet.mydomain.com',
+  }
+
+License
+-------
+
+
+Contact
+-------
+
+
+Support
+-------
+
+Please log tickets and issues at our [Projects site](http://projects.example.com)
