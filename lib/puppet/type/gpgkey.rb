@@ -7,13 +7,13 @@ Puppet::Type.newtype(:gpgkey) do
     end
 
     newparam(:keytype) do
-      defaultto 'DSA'
+      defaultto 'RSA'
       desc 'GPG Key Type'
     end
 
     newparam(:keylength) do
-      defaultto '1024'
-      desc 'Key Length (default 1024)'
+      defaultto '4096'
+      desc 'Key Length (default 4096)'
     end
 
     newparam(:subkeytype) do
@@ -22,8 +22,8 @@ Puppet::Type.newtype(:gpgkey) do
     end
 
     newparam(:subkeylength) do
-      defaultto '1024'
-      desc 'Sub Key Length (default 1024)'
+      defaultto '4096'
+      desc 'Sub Key Length (default 4096)'
     end
 
     newparam(:email) do
