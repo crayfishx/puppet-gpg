@@ -36,7 +36,7 @@ class gpg (
   }
 
   package { 'gpgme':
-    ensure    => 'instaled',
+    ensure    => 'installed',
     provider  => $gpgme_provider,
     require   => Package['gnupg']
   }
