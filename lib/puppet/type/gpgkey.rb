@@ -42,4 +42,23 @@ Puppet::Type.newtype(:gpgkey) do
       defaultto true
     end
 
+    newparam(:user) do
+      desc <<-EOT
+        The user account in which the key should be managed.
+        The resource will automatically depend on this user.
+      EOT
+    end
+
+    newparam(:gnupghome) do
+      desc <<-EOT
+        The GnuPG data directory in which the key should be managed.
+        If this is not set, GnuPG selects the directory by itself.
+      EOT
+    end
+
+    # Autorequire the owner of the ~/.gnupg directory.
+    autorequire(:user) do
+      self[:user]
+    end
+
 end
